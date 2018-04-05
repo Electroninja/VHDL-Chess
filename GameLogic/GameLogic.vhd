@@ -187,8 +187,7 @@ begin
 							end if;
 							SelectMode <= '0';
 							TempPiece <= 7;
-				elsif(SelectX = OldSelectX and Board(OldSelectY+1,OldSelectX) = 7 and 
-						Board(OldSelectY+2,OldSelectX) = 7 and SelectY = OldSelectY+2) then
+				elsif(SelectX = OldSelectX and Board(OldSelectY+1,OldSelectX) = 7 and Board(OldSelectY+2,OldSelectX) = 7 and SelectY = OldSelectY+2 and OldSelectY = 1) then
 							Board(SelectY,SelectX) <= TempPiece;
 							SelectMode <= '0';
 							TempPiece <= 7;
@@ -486,8 +485,7 @@ begin
 							end if;
 							SelectMode <= '0';
 							TempPiece <= 7;
-				elsif(SelectX = OldSelectX and Board(OldSelectY-1,OldSelectX) = 7 and 
-						Board(OldSelectY-2,OldSelectX) = 7 and SelectY = OldSelectY-2) then
+				elsif(SelectX = OldSelectX and Board(OldSelectY-1,OldSelectX) = 7 and Board(OldSelectY-2,OldSelectX) = 7 and SelectY = OldSelectY-2 and OldSelectY = 6) then
 							Board(SelectY,SelectX) <= TempPiece;
 							SelectMode <= '0';
 							TempPiece <= 7;
